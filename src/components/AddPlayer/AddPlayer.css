@@ -1,0 +1,12 @@
+.AddPlayer {
+  padding-left: 40px;
+  margin-top: 60px;
+}
+
+.AddPlayer_input {
+  width: 330px;
+}
+
+.AddPlayer_submit {
+  width: calc(400px - 330px);
+}
