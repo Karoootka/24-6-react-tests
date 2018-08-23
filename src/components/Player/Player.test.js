@@ -2,7 +2,7 @@ import Player from './Player';
 import React from 'react';
 import { shallow } from 'enzyme';
 
-it('render without crashing', () => {
+it('renders without crashing', () => {
   shallow(<Player />);
 });
 
@@ -28,7 +28,7 @@ it('should call onPlayerScoreChange with 1 when plus button is clicked', () => {
   const mockedOnPlayerScoreChange = jest.fn();
   const playerComponent = shallow(<Player onPlayerScoreChange={mockedOnPlayerScoreChange} />);
 
-  const plusButton = playerComponent.find('.Player_button').first();
+  const plusButton = playerComponent.find('.Player_button').at(1);
 
   plusButton.simulate('click');
 
@@ -39,9 +39,19 @@ it('should call onPlayerScoreChange with -1 when minus button is clicked', () =>
   const mockedOnPlayerScoreChange = jest.fn();
   const playerComponent = shallow(<Player onPlayerScoreChange={mockedOnPlayerScoreChange} />);
 
-  const plusButton = playerComponent.find('.Player_button').last();
+  const plusButton = playerComponent.find('.Player_button').at(2);
 
   plusButton.simulate('click');
 
   expect(mockedOnPlayerScoreChange).toBeCalledWith(-1);
 });
+
+it('should call onPlayerRemove when remove button is clicked', () => {
+  const mockedOnPlayerRemove = jest.fn();
+  const playerComponent = shallow(<Player onPlayerRemove={mockedOnPlayerRemove} />);
+  const removeButton = playerComponent.find('.Player_button').at(0);
+
+  removeButton.simulate('click');
+
+  expect(mockedOnPlayerRemove).toBeCalled();
+})

@@ -3,6 +3,7 @@ import './Player.css';
 
 const Player = (props) => (
   <li className="Player">
+    <span className="Player_button" onClick={() => props.onPlayerRemove()}>x</span>
     <span className="Player_name">{props.name}</span>
     <span className="Player_score">{props.score}</span>
     <span className="Player_button" onClick={() => props.onPlayerScoreChange(1)} >+</span>
