@@ -1,0 +1,29 @@
+.Player {
+  background-color: #b6b6b6;
+  width: 400px;
+  height: 30px;
+  line-height: 30px;
+  display: flex;
+}
+
+.Player_name, .Player_score, .Player_button {
+  border: 1px solid black;
+  /* display: inline-block; */
+}
+
+.Player_name {
+  flex: 7;
+  text-transform: uppercase;
+  padding-left: 5px;
+}
+
+.Player_score {
+  flex: 2;
+  text-align: center;
+}
+
+.Player_button {
+  flex: 1;
+  text-align: center;
+  cursor: pointer;
+}
