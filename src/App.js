@@ -14,7 +14,7 @@ class App extends Component {
         },
         {
           name: 'Karolina',
-          score: 85,
+          score: 7,
         }
       ]
     }
@@ -28,23 +28,29 @@ class App extends Component {
         }
         return player;
       })
-    })
+    }, this.onScoreSort);
   }
 
   onPlayerAdd = (playerName) => {
-    const newPlayer = {
-      name: playerName,
-      score: 0,
-    };
-    this.setState({
-      players: [ ...this.state.players, newPlayer ]
-    })
+    if (!playerName) {
+      alert('Enter player name!')
+    } else {
+      const newPlayer = {
+        name: playerName,
+        score: 0,
+      };
+      this.setState({
+        players: [ ...this.state.players, newPlayer ]
+      }, this.onScoreSort)
+    }
   }
 
   onPlayerRemove = (playerIndex) => {
-    this.setState({
-      players: this.state.players.filter((player, index) => index !== playerIndex)
-    });
+    if (window.confirm('Are your sure you want to remove this player?')) {
+      this.setState({
+        players: this.state.players.filter((player, index) => index !== playerIndex)
+      });
+    }
   }
 
   onPlayerUpdate = (playerIndex, playerNewName) => {
@@ -54,6 +60,14 @@ class App extends Component {
             return { ...player, name: playerNewName};
           }
           return player;
+      })
+    })
+  }
+
+  onScoreSort = () => {
+    this.setState({
+      players: this.state.players.sort((a ,b) => {
+        return a.score - b.score;
       })
     })
   }

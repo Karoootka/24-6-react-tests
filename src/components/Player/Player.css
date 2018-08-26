@@ -1,5 +1,4 @@
 .Player {
-  background-color: #b6b6b6;
   width: 400px;
   height: 30px;
   line-height: 30px;
@@ -8,7 +7,7 @@
 
 .Player_name, .Player_score, .Player_button {
   border: 1px solid black;
-  /* display: inline-block; */
+  background-color: #b6b6b6;
 }
 
 .Player_name {
@@ -26,4 +25,22 @@
   flex: 1;
   text-align: center;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.Remove_button {
+  padding-left: 10px;
+  cursor: pointer;
+}
+
+body {
+  counter-reset: section;
+}
+
+li::before {
+  counter-increment: section;
+  content: counter(section);
+  width: 30px;
+  text-align: center;
+  border: 0.5px solid black;
 }

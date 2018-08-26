@@ -2,7 +2,7 @@ import React from 'react';
 import Player from '../Player/Player';
 
 const PlayersList = (props) => (
-  <ul className="PlayersList">
+  <ol className="PlayersList">
     {props.players.map((player, i) => (
       <Player
         key={i}
@@ -13,7 +13,7 @@ const PlayersList = (props) => (
         onPlayerUpdate={(playerNewName) => props.onPlayerUpdate(i, playerNewName)}
       />)
     )}
-  </ul>
+  </ol>
 );
 
 export default PlayersList;
