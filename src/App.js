@@ -10,11 +10,11 @@ class App extends Component {
       players: [
         {
           name: 'Kacper',
-          score: 5,
+          score: 7,
         },
         {
           name: 'Karolina',
-          score: 7,
+          score: 5,
         }
       ]
     }
@@ -67,7 +67,16 @@ class App extends Component {
   onScoreSort = () => {
     this.setState({
       players: this.state.players.sort((a ,b) => {
-        return a.score - b.score;
+        return b.score - a.score;
+      })
+    })
+  }
+
+  resetScores = () => {
+    console.log('dziala');
+    this.setState({
+      players: this.state.players.map(player => {
+        return { ...player, score: 0}
       })
     })
   }
@@ -82,6 +91,7 @@ class App extends Component {
           onPlayerRemove={this.onPlayerRemove}
           onPlayerUpdate={this.onPlayerUpdate}
         />
+        <button className="Reset_list" onClick={() => this.resetScores()}>Reset</button>
       </div>
     );
   }

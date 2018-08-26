@@ -8,8 +8,8 @@ const Player = (props) => (
       <EditPlayer value={props.name} onPlayerUpdate={(playerNewName) => props.onPlayerUpdate(playerNewName)} />
     </span>
     <span className="Player_score">{props.score}</span>
-    <span className="Player_button" onClick={() => props.onPlayerScoreChange(1)} >+</span>
-    <span className="Player_button" onClick={() => props.onPlayerScoreChange(-1)} >-</span>
+    <span className="Player_button plus_button" onClick={() => props.onPlayerScoreChange(1)} >+</span>
+    <span className="Player_button minus_button" onClick={() => props.onPlayerScoreChange(-1)} >-</span>
     <span className="Remove_button" onClick={() => props.onPlayerRemove()}>x</span>
   </li>
 )

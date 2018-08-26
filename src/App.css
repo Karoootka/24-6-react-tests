@@ -1,0 +1,13 @@
+.App {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.PlayersList {
+  display: inline-block;
+}
+
+.Reset_list {
+  display: block;
+  margin: 10px auto;
+}
