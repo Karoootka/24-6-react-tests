@@ -33,8 +33,16 @@
   background-color: #228b22;
 }
 
+.plus_button:active {
+  background-color: #11ad11;
+}
+
 .minus_button {
   background-color: #ef4f4f;
+}
+
+.minus_button:active {
+  background-color: #f27474;
 }
 
 .Remove_button {
