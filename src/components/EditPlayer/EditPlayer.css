@@ -1,0 +1,9 @@
+.Player_edit {
+  display: inline-block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.Edit_input {
+  text-transform: uppercase;
+}

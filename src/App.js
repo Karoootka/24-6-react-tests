@@ -7,7 +7,16 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      players: []
+      players: [
+        {
+          name: 'Kacper',
+          score: 5,
+        },
+        {
+          name: 'Karolina',
+          score: 85,
+        }
+      ]
     }
   }
 
@@ -38,11 +47,27 @@ class App extends Component {
     });
   }
 
+  onPlayerUpdate = (playerIndex, playerNewName) => {
+    this.setState({
+      players: this.state.players.map((player, index) => {
+          if (index === playerIndex) {
+            return { ...player, name: playerNewName};
+          }
+          return player;
+      })
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <AddPlayer onPlayerAdd={this.onPlayerAdd} />
-        <PlayersList players={this.state.players} onScoreUpdate={this.onScoreUpdate} onPlayerRemove={this.onPlayerRemove} />
+        <PlayersList
+          players={this.state.players}
+          onScoreUpdate={this.onScoreUpdate}
+          onPlayerRemove={this.onPlayerRemove}
+          onPlayerUpdate={this.onPlayerUpdate}
+        />
       </div>
     );
   }
