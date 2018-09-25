@@ -2,6 +2,7 @@
   "name": "score",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://karolinamdj.github.io/24-6-react-tests",
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -11,11 +12,14 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
     "enzyme": "^3.4.4",
     "enzyme-adapter-react-16": "^1.2.0",
+    "gh-pages": "^2.0.0",
     "react-test-renderer": "^16.4.2"
   }
 }
