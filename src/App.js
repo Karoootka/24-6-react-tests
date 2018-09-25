@@ -9,11 +9,11 @@ class App extends Component {
     this.state = {
       players: [
         {
-          name: 'Kacper',
+          name: 'John',
           score: 7,
         },
         {
-          name: 'Karolina',
+          name: 'Kate',
           score: 5,
         }
       ]

@@ -4,10 +4,13 @@
 }
 
 .PlayersList {
+  padding-left: 0;
   display: inline-block;
 }
 
 .Reset_list {
   display: block;
   margin: 10px auto;
+  height: 30px;
+  width: 60px;
 }

@@ -3,18 +3,29 @@
   height: 30px;
   line-height: 30px;
   display: flex;
-  padding: 3px;
+  margin: 12px 0;
 }
 
-.Player_name, .Player_score, .Player_button {
+.Player_name {
   border: 1px solid #2b2b2b;
+}
+
+.Player_score {
+  border-top: 1px solid #2b2b2b;
+  border-bottom: 1px solid #2b2b2b;
+  border-right: 1px solid #2b2b2b;
+  font-weight: bold;
+}
+
+.plus_button, .minus_button {
+  margin-left: 3px;
+  font-size: 22px;
 }
 
 .Player_name {
   flex: 7;
   text-transform: uppercase;
   padding-left: 5px;
-  background-color: #d3d3d3;
 }
 
 .Player_score {
@@ -26,23 +37,23 @@
   flex: 1;
   text-align: center;
   cursor: pointer;
-  font-weight: bold;
+  transition: .3s;
 }
 
 .plus_button {
-  background-color: #228b22;
+  background-color: #3a8e3a;
 }
 
 .plus_button:active {
-  background-color: #11ad11;
+  background-color: #118911;
 }
 
 .minus_button {
-  background-color: #ef4f4f;
+  background-color: #cd4949;
 }
 
 .minus_button:active {
-  background-color: #f27474;
+  background-color: #ba2121;
 }
 
 .Remove_button {

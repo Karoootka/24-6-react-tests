@@ -1,0 +1,19 @@
+html {
+  min-height: 100vh;
+  background: url('https://images.pexels.com/photos/209728/pexels-photo-209728.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-size: cover;
+  background-position: center top;
+}
+
+.app-container {
+  width: 50%;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin-top: 20px;
+  padding: 30px;
+}
+
+h1 {
+  text-transform: uppercase;
+  color: #222226;
+}
