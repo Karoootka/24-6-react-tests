@@ -1,5 +1,5 @@
 .Player {
-  width: 400px;
+  width: 40vw;
   height: 30px;
   line-height: 30px;
   display: flex;
@@ -71,4 +71,10 @@ li::before {
   width: 30px;
   text-align: center;
   border: 1px solid #2b2b2b;
+}
+
+@media (max-width: 768px) {
+  .Player {
+    width: 80vw;
+  }
 }
