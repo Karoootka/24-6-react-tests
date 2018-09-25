@@ -6,7 +6,7 @@ html {
 }
 
 .app-container {
-  width: 50%;
+  width: 80vw;
   margin: 0 auto;
   background-color: rgba(255, 255, 255, 0.4);
   margin-top: 20px;
